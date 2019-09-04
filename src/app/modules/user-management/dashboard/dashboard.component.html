@@ -1,0 +1,41 @@
+<div class="list-issues container-fluid  bg-gray">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <button class="btn btn-dark mt-5" (click)="registerUser()">Register User</button>
+        <div class="filteer-class float-right">
+        <span>Filter By:
+          <select name="filterIssue" id="filterIssue" [(ngModel)]="filterStatus">
+              <option hidden undefined>All</option>
+              <option value="Open">Enabled</option>
+              <option value="Closed">Disabled</option>
+              <option value="In Progress">Deleted</option>
+          </select>
+        </span>
+      </div>
+        <div class="mt-5">
+          <table class="table bg-table table-striped">
+            <thead style="background: aliceblue">
+              <tr>
+                <th>Username</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Status</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users| userFilter:filterStatus">
+                <td>{{user.username}}</td>
+                <td>{{user.firstName}}</td>
+                <td class="text-center">{{user.lastName}}</td>
+                <td>{{user.status}}</td>
+                <td>
+                  {{user.role}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

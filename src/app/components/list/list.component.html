@@ -1,0 +1,42 @@
+<div class="list-issues container-fluid  bg-gray">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-xs-12">
+        <button class="btn btn-dark mt-5" (click)="addIssue()">Create New Issue</button>
+        <div class="filteer-class float-right">
+        <span>Filter By:
+          <select name="filterIssue" id="filterIssue" [(ngModel)]="filterStatus">
+            <option hidden undefined>All</option>
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+            <option value="In Progress">In Progress</option>
+          </select>
+        </span>
+      </div>
+        <div class="mt-5">
+          <table class="table bg-table table-striped">
+            <thead style="background: aliceblue">
+              <tr>
+                <th>Title</th>
+                <th>Responsible</th>
+                <th class="text-center">Severity</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let issue of issues.data | issueFilter:filterStatus">
+                <td>{{issue.title}}</td>
+                <td>{{issue.responsible}}</td>
+                <td class="text-center">{{issue.severity}}</td>
+                <td>{{issue.status}}</td>
+                <td>
+                    <i class="far fa-edit mr-5" (click)="editIssue(issue)"></i>
+                    <i class="fas fa-trash" (click)="deleteIssue(issue)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

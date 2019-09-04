@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="topNavbar">
+      <h5 class="text-white">Angular MEAN Stack Example</h5>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a  class="nav-link" [routerLink]="['/list']">List</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" [routerLink]="['/create']">Create</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" routerLink="['/list']">Update</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" routerLink="['/list']">Delete</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div>
+      <div class="loader" *ngIf="loading"></div>
+    <router-outlet></router-outlet>
+  </div>

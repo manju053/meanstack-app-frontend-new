@@ -1,0 +1,24 @@
+<div class="sidebar-fixed">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="sidebar-sticky">
+          <ul class="nav">
+            <li class="nav-item">
+              <a  class="nav-link" [routerLink]="['/users/dashboard']"><span><i class="fas fa-tachometer-alt"></i></span>  Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" [routerLink]="['/users/create']"><span><i class="far fa-check-square"></i></span>  Create Product</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" [routerLink]="['/users/register']"><span><i class="far fa-user"></i></span>  Register Users</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

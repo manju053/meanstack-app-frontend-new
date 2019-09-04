@@ -1,0 +1,17 @@
+.bg-gray {
+    background-color: #f2f2f2;
+    height: 90vh;
+}
+
+table.table.bg-table {
+    background: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(100,144,100,.05);
+}
+
+.filteer-class {
+    margin-top: 6rem;
+}
+

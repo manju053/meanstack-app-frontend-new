@@ -1,0 +1,9 @@
+.sidebar-fixed .container-fluid {
+    padding-left: 0;
+}
+
+.sidebar-sticky {
+    background: #343a40!important;
+    color: white;
+    height: calc(100vh - 60px);
+}
